@@ -1,0 +1,5 @@
+//알람 권한
+<uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+
+//알람 울릴 때 진동 권한    
+<uses-permission android:name="android.permission.VIBRATE" />
