@@ -29,6 +29,17 @@
             android:layout_height="40dp"
             android:src="@android:drawable/ic_input_add"
             app:tint="@color/white"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toStartOf="@id/btnDelete"
+            app:layout_constraintTop_toTopOf="@id/tvTitle"
+            app:layout_constraintBottom_toBottomOf="@id/tvTitle"/>
+
+        <ImageView
+            android:id="@+id/btnDelete"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/ic_menu_delete"
+            app:tint="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/tvTitle"
             app:layout_constraintBottom_toBottomOf="@id/tvTitle"/>
@@ -39,6 +50,7 @@
             android:layout_marginTop="20dp"
             app:layout_constraintTop_toBottomOf="@id/tvTitle"
             app:layout_constraintBottom_toBottomOf="parent">
+
             <LinearLayout
                 android:id="@+id/alarmContainer"
                 android:layout_width="match_parent"
@@ -47,10 +59,12 @@
         </ScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+
     <include
         layout="@layout/layout_setting"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout_alarm_ringing"
@@ -58,24 +72,26 @@
         android:layout_height="match_parent"
         android:background="@drawable/gradient_bg"
         android:visibility="gone"
-        android:padding="20dp"> <TextView
-        android:id="@+id/tvRingingTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="00:00"
-        android:textSize="80sp"
-        android:textColor="@color/white"
-        android:fontFamily="sans-serif-thin"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="100dp"/>
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tvRingingTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textSize="80sp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-thin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="100dp"/>
 
         <TextView
             android:id="@+id/tvRingingDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1월 1일 월요일"
+            android:text="날짜"
             android:textSize="20sp"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="parent"
